@@ -45,6 +45,7 @@ function carla_enqueue_script() {
 		}
 
 	wp_enqueue_script("kinetic", get_stylesheet_directory_uri()."/js/smoothscroll/jquery.kinetic.min.js", "jquery", "", true);
+	wp_enqueue_script("yepnope", get_stylesheet_directory_uri()."/bower_components/yepnope/yepnope.1.5.4-min.js", "", "1.5.4");
 	wp_enqueue_script("jquery ui", "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js", "jquery", "1.10.3");
 	wp_enqueue_script("mousewheel", get_stylesheet_directory_uri()."/js/smoothscroll/jquery.mousewheel.min.js", "jquery", "1.3", true);
 	

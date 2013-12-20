@@ -43,17 +43,17 @@ wp_head();
 woo_head();
 ?>
 <script>
-  Modernizr.load([{
-    // Does the browser support @font-face?
-    test: Modernizr.fontface, // Should return a boolean
-    // Yep! Get the fonts
-    yep : '//use.typekit.com/yhy4ini.js',
+  yepnope({
+    load: ["//use.typekit.com/yhy4ini.js"],
     complete: function() {
       // Load complete! Tell Typekit to start up
       try { Typekit.load(); } catch(e) {};
       // Profit!
     }
-  }]);
+   
+    
+  });
+  
 </script>
 </head>
 <body <?php body_class('body screen'); ?>>

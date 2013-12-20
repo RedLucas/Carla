@@ -14,8 +14,7 @@ GLOBAL STYLES
 ----------------
 Add styles beneath this line that you want to be applied across your entire site */
 
-@import "bourbon";
-
+@import "../bower_components/bourbon";
 
 /*
 DESKTOP STYLES
@@ -39,6 +38,11 @@ body.body #wrapper #inner-wrapper {
 
 #header {
 	border-right: 2px solid #909090;
+	.site-title, .site-description  {
+		
+		text-align: center;
+		
+	}
 }
 #main_slider {
 	//height: 500px;

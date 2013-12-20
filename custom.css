@@ -15,8 +15,18 @@ Add styles beneath this line that you want to be applied across your entire site
 DESKTOP STYLES
 -----------------
 Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
-@media only screen and (min-width: 768px) {
-  /* Desktop styles go here */ }
-body.body {
-  background-color: black;
-  color: white; }
+@media only screen and (min-width: 768px) { /* Desktop styles go here */ }
+/* line 32, sass/custom.scss */
+body.body #wrapper #inner-wrapper { background-color: black; color: white; }
+/* line 35, sass/custom.scss */
+body.body #wrapper #inner-wrapper a, body.body #wrapper #inner-wrapper p, body.body #wrapper #inner-wrapper h1, body.body #wrapper #inner-wrapper h2 { color: white; }
+/* line 40, sass/custom.scss */
+body.body #wrapper #inner-wrapper #header { border-right: 2px solid #909090; }
+/* line 43, sass/custom.scss */
+body.body #wrapper #inner-wrapper #main_slider { overflow: hidden; }
+/* line 46, sass/custom.scss */
+body.body #wrapper #inner-wrapper #main_slider img { display: block; float: left; }
+/* line 50, sass/custom.scss */
+body.body #wrapper #inner-wrapper #main_slider div.scrollWrapper { position: relative; overflow: hidden; width: 100%; }
+/* line 57, sass/custom.scss */
+body.body #wrapper #inner-wrapper #main_slider div.scrollableArea { position: relative; width: auto; }

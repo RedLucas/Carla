@@ -137,25 +137,7 @@ woo_head();
 				<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
 			</ul><!-- /#nav -->
 	        <?php } ?>
-	        <ul class="nav rss">
-	            <?php
-	            	$email = '';
-	            	$rss = get_bloginfo_rss( 'rss2_url' );
-
-	            	if ( isset( $woo_options['woo_subscribe_email'] ) && ( $woo_options['woo_subscribe_email'] != '' ) ) {
-	            		$email = $woo_options['woo_subscribe_email'];
-	            	}
-
-	            	if ( isset( $woo_options['woo_feed_url'] ) && ( $woo_options['woo_feed_url'] != '' ) ) {
-	            		$rss = esc_url( $woo_options['woo_feed_url'] );
-	            	}
-
-	            	if ( $email != '' ) {
-	            ?>
-	            <li class="sub-email"><a href="<?php echo esc_url( $email ); ?>" target="_blank"><?php _e( 'Email', 'woothemes' ); ?></a></li>
-	            <?php } ?>
-	            <li class="sub-rss"><a href="<?php echo esc_url( $rss ); ?>"><?php _e( 'RSS', 'woothemes' ); ?></a></li>
-	        </ul>
+	       
 
 	    	</section><!--/.menus-->
 
@@ -177,7 +159,7 @@ woo_head();
 				} else { ?>
 					<p>
 						<strong><?php bloginfo(); ?></strong><br />
-						&copy; <?php echo date( 'Y' ); ?>. <?php _e( 'By', 'woothemes' ); ?> WooThemes.<a href="<?php echo esc_url( 'http://www.woothemes.com/' ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/woothemes.png' ); ?>" width="32" height="19" alt="WooThemes" /></a>
+						&copy; <?php echo date( 'Y' ); ?>.
 					</p>
 				<?php } ?>
 				</div>

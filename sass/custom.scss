@@ -8,6 +8,8 @@ Add your custom styles in this file instead of style.css so it
 is easier to update the theme. Simply copy an existing style
 from style.css to this file, and modify it to your liking. */
 
+$white: white;
+
 
 /*
 GLOBAL STYLES
@@ -32,7 +34,7 @@ body.body #wrapper #inner-wrapper {
 	background-color: black;
 	color: white;
 	a, p, h1, h2 {
-		color: white;
+		color: $white;
 	}
 	
 
@@ -42,6 +44,9 @@ body.body #wrapper #inner-wrapper {
 		
 		text-align: center;
 		
+	}
+	#navigation ul.nav > li.current-menu-item > a {
+		border-left: 5px solid $white;
 	}
 }
 #main_slider {

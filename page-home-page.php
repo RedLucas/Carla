@@ -23,16 +23,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
        <?php 
 		// the query
 		$args = array(
-			'post_type' => 'posters',
+			'post_type' => 'shows',
 		);
-		$posters_query = new WP_Query( $args ); ?>
+		$shows_query = new WP_Query( $args ); ?>
 		
-		<?php if ( $posters_query->have_posts() ) : ?>
+		<?php if ( $shows_query->have_posts() ) : ?>
 		
 		  <!-- pagination here -->
 		  
 		  <!-- the loop -->
-		  <?php while ( $posters_query->have_posts() ) : $posters_query->the_post(); ?>
+		  <?php while ( $shows_query->have_posts() ) : $shows_query->the_post(); ?>
 		  <?php if ( has_post_thumbnail()):  ?>
 		  <?php the_post_thumbnail("medium") ?>
 		  <?php endif; //end has_post_thumbnail** ?>

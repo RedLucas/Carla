@@ -53,6 +53,7 @@ function carla_enqueue_script() {
 	wp_enqueue_script("modernizr", "//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.1.js", "2.7.1");
 	
 	wp_enqueue_script("slider init", get_stylesheet_directory_uri()."/js/slider.js", "jquery", "" , true);
+	wp_enqueue_script("galleria", get_stylesheet_directory_uri()."/js/galleria/galleria-1.3.3.min.js", "jquery", "1.3.3");
 	
 }
 add_action( 'wp_enqueue_scripts', 'carla_enqueue_script' );

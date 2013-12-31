@@ -47,6 +47,7 @@ body.body #wrapper #inner-wrapper {
 	}
 	#navigation ul.nav > li.current-menu-item > a {
 		border-left: 5px solid $white;
+		text-transform: capitalize;
 	}
 }
 #main_slider {

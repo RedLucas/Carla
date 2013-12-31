@@ -4,4 +4,4 @@
 //	$go = true;
 //});
 //jQuery("#main_slider img").css("visibility", "hidden");
-jQuery("#main_slider img").css("display","none");jQuery(document).ready(function(e){jQuery("#main_slider img").css("display","block");e("#main_slider").smoothDivScroll({autoScrollingMode:"always",autoScrollingDirection:"endlessLoopRight",autoScrollingInterval:50});e("#main_slider").bind("mouseover",function(){e(this).smoothDivScroll("stopAutoScrolling")}).bind("mouseout",function(){e(this).smoothDivScroll("startAutoScrolling")})});
+jQuery("#main_slider img").css("display","none");jQuery(document).ready(function(e){e("#main_slider img").css("display","block");e("#main_slider").smoothDivScroll({autoScrollingMode:"always",autoScrollingDirection:"endlessLoopRight",autoScrollingInterval:50});e("#main_slider").bind("mouseover",function(){e(this).smoothDivScroll("stopAutoScrolling")}).bind("mouseout",function(){e(this).smoothDivScroll("startAutoScrolling")});Galleria.loadTheme("galleria/themes/classic/galleria.classic.min.js");Galleria.run(".galleria")});

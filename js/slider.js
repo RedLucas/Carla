@@ -12,7 +12,7 @@
 jQuery("#main_slider img").css("display", "none");
 jQuery(document).ready(function($){
 			//jQuery("#main_slider img").css("visibility", "visible");
-			jQuery("#main_slider img").css("display", "block");
+			$("#main_slider img").css("display", "block");
 			$("#main_slider").smoothDivScroll({
 				autoScrollingMode: "always", 
 				autoScrollingDirection: "endlessLoopRight",  
@@ -25,4 +25,10 @@ jQuery(document).ready(function($){
 				$(this).smoothDivScroll("startAutoScrolling");
 			});
 		
+		
+		
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria');
+
 });
+

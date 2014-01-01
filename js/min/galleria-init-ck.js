@@ -1,0 +1,1 @@
+jQuery(".galleria p").contents().unwrap(),jQuery(document).ready(function(a){Galleria.run(".galleria"),Galleria.configure({imageCrop:!0,transition:"fade",autoplay:1e3,thumbPosition:"top",height:.5625})});

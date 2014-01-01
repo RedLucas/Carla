@@ -40,7 +40,7 @@ if ( is_woocommerce_activated() ) {
 function carla_enqueue_script() {
 	if (!is_admin()) {
 		wp_deregister_script('jquery');
-	        wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2');
+	        wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', false, '1.9.1');
 	        wp_enqueue_script('jquery');
 		}
 
@@ -53,10 +53,24 @@ function carla_enqueue_script() {
 	wp_enqueue_script("modernizr", "//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.1.js", "2.7.1");
 	
 	wp_enqueue_script("slider init", get_stylesheet_directory_uri()."/js/slider.js", "jquery", "" , true);
-	wp_enqueue_script("galleria", get_stylesheet_directory_uri()."/js/galleria/galleria-1.3.3.min.js", "jquery", "1.3.3");
+	
+	if (is_singular("posters")){
+	//	wp_enqueue_script("galleria", get_stylesheet_directory_uri()."/js/galleria/galleria-1.3.3.min.js", "jquery", "1.3.3", true);
+	//	wp_enqueue_style( 'galleria classic theme', get_stylesheet_directory_uri()."/js/galleria/themes/classic/galleria.classic.css" );
+	//	wp_enqueue_script("galleria classic theme", get_stylesheet_directory_uri()."/js/galleria/themes/classic/galleria.classic.min.js", "galleria", "1.3.3", true);
+		
+	//	wp_enqueue_script("galleria init", get_stylesheet_directory_uri()."/js/galleria-init.js", "galleria theme", "1.3.3", true);
+	}
 	
 }
 add_action( 'wp_enqueue_scripts', 'carla_enqueue_script' );
+
+function show_post($path) {
+  $post = get_page_by_path($path);
+  $content = apply_filters('the_content', $post->post_content);
+  return $content;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */

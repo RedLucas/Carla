@@ -27,7 +27,9 @@ Add styles inside the media query below that you only want to be applied to the 
 	/* Desktop styles go here */
 }
 
-
+body.body #wrapper {
+	background-color: black;
+}
 
 
 body.body #wrapper #inner-wrapper {
@@ -71,7 +73,11 @@ body.body #wrapper #inner-wrapper {
 	}
 }
 	
-
+.galleria { 
+			width: 100%; 
+			height: auto; 
+			background: #000;
+			}
 
 
 
